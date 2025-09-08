@@ -14,8 +14,11 @@
 <script type="text/javascript" charset="UTF-8" src="https://res.openinstall.com/openinstall-e31icf.js"></script>
 <script type="text/javascript">
   	var data = OpenInstall.parseUrlParams();///openinstall-{appKey}.js中提供的api，解析当前网页url中的查询参数并对data进行赋值
+   
+
+
 	new OpenInstall({//初始化方法，与openinstall服务器交互，应尽早调用
-		appKey : "e31icf",//appKey为openinstall为应用分配的唯一id（必须传入）
+		appKey : "e31icf",//appKey为openinstall为应用分配的唯一id（必须传入 ） 
 		onready : function() {//初始化成功回调方法。当初始化完成后，会自动进入
 			this.schemeWakeup();//尝试使用scheme打开App（主要用于Android以及iOS的QQ环境中）
 			var m = this, button = document.getElementById("downloadButton");//为button对象绑定对应id的元素
@@ -241,8 +244,7 @@
                 $('.wechat-android').show()
               });
             }
-
-            $(".down").attr("href",'https://img.shiguangdao.cn/apk/shiguangdao-1.3.5.apk');
+            $(".down").attr("href",'https://img.shiguangdao.cn/apk/shiguangdao-1.3.6.apk');
             //打开引导弹窗
             $(".doubt").click(function(event) {
                 $(".pup").fadeIn();
@@ -253,8 +255,6 @@
                     },
                 });
             });
-
-			
         }
         //在微信中打开
         if (isWeiXin) {
